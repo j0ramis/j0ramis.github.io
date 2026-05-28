@@ -48,3 +48,7 @@ blockquote {
     text-align: center;
     margin: 25px;
 }
+
+blockquote cite{
+    margin-bottom: 25px;
+}
