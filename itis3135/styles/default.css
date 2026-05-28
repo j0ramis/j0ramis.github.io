@@ -1,0 +1,28 @@
+body {
+    background-color: blanchedalmond;
+}
+
+header, main, footer {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    border-bottom: 3px solid #3f586f;
+}
+
+h1, h2 {
+    color: #20245f;
+}
+
+nav {
+    margin: 15px 0;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.95rem;
+    margin-top: 20px;
+}
