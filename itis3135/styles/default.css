@@ -41,3 +41,10 @@ figcaption,
 cite {
     font-style: italic;
 }
+
+blockquote {
+    border-top: 2px solid #20245f;
+    border-bottom: 2px solid #20245f;
+    text-align: center;
+    margin: 25px;
+}
