@@ -27,7 +27,17 @@ footer {
     margin-top: 20px;
 }
 
-img {
-    margin-left: auto;
-    margin-right: auto;
+figure {
+    text-align: center;
+}
+
+figure img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+figcaption,
+cite {
+    font-style: italic;
 }
