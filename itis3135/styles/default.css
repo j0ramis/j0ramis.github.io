@@ -104,3 +104,15 @@ footer {
     margin-top: 40px;
     padding-top: 30px;
 }
+
+a {
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+a:hover {
+    color: #8f8f8f;
+    text-decoration: underline;
+}
