@@ -18,7 +18,8 @@
 
         header,
         main,
-        footer {
+        footer, 
+        section {
             margin: 20px auto;
             max-width: 900px;
             padding: 20px;
@@ -38,13 +39,13 @@
         }
 
         h2 {
-            color: #a78bfa;
+            color: #6c5a80;
             border-bottom: 2px solid #ddd6fe;
             display: inline-block;
             padding-bottom: 5px;
         }
 
-        main {
+        section {
             background-color: #ffffff;
             border: 1px solid #e2daeb;
             border-radius: 12px;
@@ -79,14 +80,18 @@
             }
         }
 
-        .name-hover {
-            transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+        .course-link {
+         display: inline-block;
+         margin-top: 12px;
+         background-color: #8b5cf6;
+         color: #fff;
+         padding: 10px 22px;
+         border-radius: 15px;
+         text-decoration: none;
         }
 
-        .name-hover:hover {
-            color: #a78bfa;
-            transform: translateY(-3px);
-            text-shadow: 0 0 12px rgba(167, 139, 250, 0.4);
+        .course-link:hover{
+            color: #6d28d9;
         }
     </style>
 </head>
@@ -102,17 +107,36 @@
     </header>
 
     <main>
-        <p id="landing-text">
-            Click to go to my 
-            <a href="itis3135/">
-                ITIS3135 Site.
-            </a>
-        </p>
-    </main>
+        <section>
+            <h2>Course Work</h2>
+            <p>Im currently enrolled in ITIS 3135 Front-End Web App Development at UNCC.</p>
+            <p>To see more information, please follow the button below:  </p>
+            <p> 
+                <a class="button-link" href="itis3135/">
+                    Visit my ITIS3135 Course Page
+                </a>
+            </p>
+        </section>
 
-    <main>
-        <h2>Introduction</h2>
+        <section>
+            <h2>Introduction</h2>
+            <p> 
+                Hello! I'm Jorrin Gutierrez, a Computer Science student at the University of North Carolina at Charlotte. I enjoy music, gaming, 3D printing, and listening to audiobooks. I am very passionate about creating and designing.
+            </p>
+        </section>
+
+        <section>
+            <h2>Interests</h2>
+            <ul>
+                <li>Listening and curating my playlists on Spotify.</li>
+                <li>Gaming on my PC (Currently playing Deadlock and older LEGO superhero games).</li>
+                <li>3D Modeling and printing, Im still learning the process to make models properly and prints cleaner.</li>
+                <li>Listening and taking notes on educational audiobooks.</li>
+            </ul>
+        </section>
     </main>
+    
+    
 
     <footer>
         <nav>
