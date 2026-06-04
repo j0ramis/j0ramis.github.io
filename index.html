@@ -10,22 +10,84 @@
     <style>
         body {
             margin: 0;
-            font-family: 'Times New Roman', Times, serif;
-            color: green;
-            line-height:1.6;
+            font-family: 'Quicksand', 'Segoe UI';
+            background: #f3f0f7;
+            color: #4a3e56;
+            line-height: 1.6;
         }
 
-        header, main, body {
-            background-color: #f0f0f0;
-            margin: 20px, auto;
+        header,
+        main,
+        footer {
+            margin: 20px auto;
+            max-width: 900px;
             padding: 20px;
-            text-align: center;
         }
 
         header {
-            border-bottom: 2px solid #000;
+            background: radial-gradient(circle, #fcfaff, #eae3f2);
+            border-bottom: 1px solid #e1d7ed;
+            border-radius: 12px;
+            text-align: center;
         }
-        
+
+        h1 {
+            color: #6c5a80;
+            font-size: clamp(32px, 6vw, 42px);
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #a78bfa;
+            border-bottom: 2px solid #ddd6fe;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        main {
+            background-color: #ffffff;
+            border: 1px solid #e2daeb;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(108, 90, 128, 0.05);
+        }
+
+        a {
+            color: #8b5cf6;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #6d28d9;
+            text-decoration: underline;
+        }
+
+        footer {
+            color: #9a8aab;
+            border-top: 2px solid #e1d7ed;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            header,
+            main,
+            footer {
+                padding: 24px 16px;
+            }
+        }
+
+        .name-hover {
+            transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .name-hover:hover {
+            color: #a78bfa;
+            transform: translateY(-3px);
+            text-shadow: 0 0 12px rgba(167, 139, 250, 0.4);
+        }
     </style>
 </head>
 
