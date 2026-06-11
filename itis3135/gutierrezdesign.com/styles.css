@@ -100,12 +100,9 @@ li {
 
 /* Contact Block */
 address {
-    background-color: #c2dbb8; 
-    border: 1px solid #597d5f; 
     padding: 24px;
     font-style: normal;
     text-align: left;
-    border-radius: 4px;
 }
 
 address table {
@@ -115,11 +112,15 @@ address table {
 
 address td {
     vertical-align: top;
+    text-align: center;
     padding: 10px 40px;
 }
 
-#contact-details {
-    text-align: left;
+#contact-info {
+    text-align: center;
+    background-color: #c2dbb8; 
+    border: 1px solid #597d5f;
+    border-radius: 4px;
 }
 
 /* General Links */
