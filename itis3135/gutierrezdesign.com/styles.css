@@ -67,7 +67,7 @@ h1 img {
 }
 
 h2, h3 {
-    text-align: center;
+    text-align: left;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -197,6 +197,11 @@ footer .validation-links a:hover {
     /* Removed translate pop effect here so footer remains anchored */
 }
 
+.feature-list {
+    background-color: #c2dbb8; 
+    border: 1px solid #597d5f; 
+    padding: 24px;
+}
 /* Responsive Mobile Rules */
 @media screen and (max-width: 700px) {
     h1 img {
