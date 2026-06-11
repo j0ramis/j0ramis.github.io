@@ -8,7 +8,7 @@
    #f9f4f5 (Off-White) - Main page background
 */
 /* Headings: Elegant, high-contrast serif */
-h1, h2, h3, .studio-title {
+.studio-title {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -26,9 +26,9 @@ body {
 }
 
 /* Subheadings / Tags */
-.project-category {
+.category {
     font-family: 'Inter', sans-serif;
-    font-weight: 500;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.85rem;
@@ -50,6 +50,10 @@ header {
 h1 {
     font-size: clamp(34px, 6vw, 48px);
     transition: color 0.3s ease, letter-spacing 0.3s ease;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #2f4f32; 
 }
 
 h1:hover {
@@ -66,6 +70,10 @@ h1 img {
 
 h2, h3 {
     text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #2f4f32; 
 }
 
 /* Main Content Area */
@@ -83,7 +91,7 @@ section {
 }
 
 ul {
-    list-style-type: square;
+    list-style-type: circle;
     color: #2f4f32; /* Tints the bullets */
 }
 
@@ -167,7 +175,7 @@ footer {
 }
 
 footer .validation-links {
-    text-align: right;
+    text-align: center;
     font-size: 0.85rem;
 }
 
