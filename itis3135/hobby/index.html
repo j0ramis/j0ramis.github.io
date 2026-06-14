@@ -1,31 +1,519 @@
+<!--Color Palette: https://coolors.co/000000-dce0d9-87818f-31081f-->
+
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEGO Building | Jorrin Gutierrez</title>
+    <link rel="icon" type="image/png" href="images/lego-logo.png" />
+    <link rel="icon" type="image/x-icon" href="images/lego-logo.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      Jorrin Gutierrez's Jolly Gator &#9553; Introduction
-    </title>
-    <link rel="stylesheet" href="styles/default.css">
-
-    
-    
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <div data-include="components/header.html"></div>
+  <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
 
+    .card {
+    background-color: #31081f;
+    border: 1px solid #87818f;
+    flex: 1 1 220px;
+    padding: 15px;
+    }
+
+    .card p {
+        color: #b0b0c0;
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+
+    .card-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin: 20px 0;
+    }
+
+    body {
+        background-color: #31081f;
+        color: #dce0d9;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    button[type="submit"] {
+        background-color: #dce0d9;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+        padding: 10px 20px;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #31081f;
+    }
+
+    caption {
+        font-weight: 600;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+
+    figcaption {
+        color: #888;
+        font-size: 0.85rem;
+        margin-top: 8px;
+    }
+
+    figcaption em {
+        font-style: italic;
+    }
+
+    figure {
+        margin: 25px 0;
+        text-align: center;
+    }
+
+    figure img {
+        border: 2px solid #87818f;
+        display: block;
+        height: auto;
+        margin: 0 auto;
+        max-width: 700px;
+    }
+
+    footer {
+        background-color: #87818f;
+        border-top: 3px solid #dce0d9;
+        color: #888;
+        font-size: 0.85rem;
+        padding: 20px;
+        text-align: center;
+    }
+
+    footer .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    footer a {
+        background-color: #dce0d9;
+        color: #000;
+        font-size: 0.8rem;
+        padding: 5px 10px;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        background-color: #31081f;
+        color: #ffffff;
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+    }
+
+    footer p {
+        color: #ffffff;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        background-color: #dce0d9;
+        color: #000000;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+        margin-left: 26.5%;
+        margin-right: 55.5%;
+        padding: 7px;
+        text-align: center;
+    }
+
+    h2 {
+        border-bottom: 2px solid #87818f;
+        color: #dce0d9;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+
+    h3 {
+        color: #dce0d9;
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+        margin-top: 20px;
+    }
+
+    header {
+        background-color: #87818f;
+        padding: 25px;
+        text-align: left;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+        background-color: #31081f;
+        border: 1px solid #87818f;
+        border-radius: 4px;
+        color: #dce0d9;
+        display: block;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+        max-width: 400px;
+        padding: 8px 10px;
+    }
+
+    input[type="text"]:focus,
+    select:focus,
+    textarea:focus {
+        outline: 2px solid #dce0d9;
+    }
+
+    label {
+        color: #dce0d9;
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    main {
+        margin: 0 auto;
+        max-width: 900px;
+        padding: 30px 20px;
+    }
+
+    nav {
+        align-items: flex-end;
+        color: #000000;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: left;
+        margin-top: 10px;
+    }
+
+    nav a {
+        background-color: #dce0d9;
+        color: #000000;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-left: 1%;
+        padding: 8px 14px;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        background-color: #31081f;
+        color: #ffffff;
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+    }
+
+    ol, ul {
+        margin: 15px 0;
+        padding-left: 20px;
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    section {
+        display: none;
+    }
+
+    section.active {
+        display: block;
+    }
+
+    table {
+        border-collapse: collapse;
+        font-size: 0.9rem;
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    td {
+        border-bottom: 1px solid #87818f;
+        padding: 10px;
+    }
+
+    th {
+        background-color: #87818f;
+        color: #dce0d9;
+        padding: 10px;
+        text-align: left;
+    }
+
+    tr:hover td {
+        background-color: #31081f;
+    }
+
+    @media (max-width: 600px) {
+    .card-row {
+        flex-direction: column;
+    }
+}
+</style>
+<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+
+    <header>
+        <h1>MY LEGO HOBBY</h1>
+        <nav aria-label="Page sections">
+            <img src="images/lego-logo.png" alt="Lego Logo" width="100" height="100" />
+            <a href="#" class="nav-link active" data-target="what">Home</a>
+            <a href="#" class="nav-link" data-target="who">About</a>
+            <a href="#" class="nav-link" data-target="when">When I Play</a>
+            <a href="#" class="nav-link" data-target="where">Places To Explore</a>
+            <a href="#" class="nav-link" data-target="how">How to Get Started</a>
+            <a href="#" class="nav-link" data-target="why">Why I Enjoy It</a>
+        </nav>
+    </header>
 
     <main>
-        <h2>Hobby</h2>
-        <p>
-            This is a temporary page for my hobby section until I start on M8A - Hobby Website.
-        </p>
+
+        <!-- WHAT -->
+        <section id="what" class="active">
+            <h2>Home</h2>
+            <p>Recently I've been reconnecting my passion for LEGO and building. For me it's a great way to unwind and express my imagination.</p>
+            <p>There are an abundance of mediums available to experience LEGO. Whether its through building (physically/digitally), gaming or storytelling there is no shortage.</p>
+        <figure>
+            <img src="images/what-lego.png" alt="A gaming setup with a monitor, keyboard, and controller on a desk" width="700" height="400" />
+            <figcaption>"It's for children..."<br><em>LEGO isn't just about playing with plastic. Its also for storytelling and building worlds.</em></figcaption>
+        </figure>
+            <div class="card-row">
+                <div class="card">
+                    <h3>Sets/Bricks</h3>
+                    <p>The most common usage and way to use LEGO to create/play. Getting a specific set with a build, characters and instructions to make and play with it.</p>
+                </div>
+                <div class="card">
+                    <h3>Video Games</h3>
+                    <p>Games that are comprised of a rich story mode, allowing players to enjoy a curated creative world, characters and collectables.</p>
+                </div>
+                <div class="card">
+                    <h3>Design/Media</h3>
+                    <p>One of the most creative ways to experience LEGO, including custom designs (fan designed creations) and media content (3d modeling, animation, etc.).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHO -->
+        <section id="who">
+            <h2>About Me</h2>
+            <p>LEGO was a significant part of my childhood, and its become more of a poplarized hobby when I entered college.</p>
+            <p>As of late, I've been focusing more on the creative side of LEGO, designing and modeling custom creations.</p>
+            <figure>
+                <img src="images/Gameplay-1.jpg" alt="Cutscene from LEGO Marvel Superheroes" width="700" height="400" />
+                <figcaption>It's all on you<br><em>Lego is only limited by your imagination</em></figcaption>
+            </figure>
+            <table>
+                <caption>My LEGO History</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Category</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Most Recent Game</td><td>LEGO Marvel Superheroes</td><td>Completed</td></tr>
+                    <tr><td>Most Recent Set</td><td>The Delorean #10300</td><td>Completed</td></tr>
+                    <tr><td>Next Game</td><td>LEGO Batman: The Videogame 2008</td><td>Not Started</td></tr>
+                    <tr><td>Next Planned Set</td><td>The Classic TV Series Batmobile #76328</td><td>Not Purchased</td></tr>
+                </tbody>
+            </table>
+            </div>
+        </section>
+
+        <!-- WHEN -->
+         <section id="when">
+            <h2>Time To Build</h2>
+            <p>The best part about LEGO is how easily it fits into your life. You can spend a quick few minutes assembling a small vehicle or lose yourself in a massive building marathon. There's no "set season" for it either, the bricks are ready whenever inspiration strikes.</p>
+            <p>Even so, any fan knows there are certain moments that are just perfect for breaking out a new set, and the LEGO community definitely has its own seasonal rhythm.</p>
+            <figure>
+                <img src="images/when-lego.png" alt="Someone playing a video game on a couch wrapped in a blanket on a winter evening" width="600" height="600" />
+                <figcaption>Cold rainy days and quiet winter nights are the ultimate excuse to build.</figcaption>
+            </figure>
+            <div class="card-row">
+                <div class="card">
+                    <h3>Late Nights Sessions</h3>
+                    <p>Once all the daily responsibilities are completely out of the way, cracking open a set with a good podcast playing in the background is the perfect midnight wind-down.</p>
+                </div>
+                <div class="card">
+                    <h3>Weekends Marathons</h3>
+                    <p>Nothing beats a completely free Saturday. You can clear off the entire dining room table, dump all the numbered bags, and build a massive flagship model without ever checking the time.</p>
+                </div>
+                <div class="card">
+                    <h3>Post-Exam Breaks (Pure Reward)</h3>
+                    <p>When your brain is fried from studying or coding, taking 20 minutes to finish just one or two instruction stages gives you a quick, satisfying win to reset your focus.</p>
+                </div>
+            </div>
+        <h3>Lego Waves</h3>
+        <ul>
+            <li><strong>Winter Wave (January 1st):</strong> This is typically the biggest, most chaotic release day of the year. LEGO routinely drops over 100 to 150 new sets all at once on New Year's Day.</li>
+            <li><strong>Mini Spring Wave (March 1st):</strong> A secondary drop that has grown significantly in recent years. Instead of waiting for summer, LEGO uses March to launch specific licensed or specialized waves.</li>
+            <li><strong>The Summer Wave (June 1st Rest of World/August 1st North America):</strong> This wave is a bit unique because its timing depends heavily on where you live. LEGO splits the summer wave to manage factory inventory and regional school vacation timelines.</li>
+            <li><strong>Small Fall Drop (October 1st):</strong> This is a smaller, targeted wave designed specifically to line up your wallet for the holiday season.</li>
+        </ul>
+        </section>
+
+        <!-- WHERE -->
+        <section id="where">
+            <h2>Places to Explore &amp; Connect</h2>
+            <p>You can get your LEGO fix just about anywhere these days—browsing designs on your phone, sorting pieces at your desk, or visiting a massive convention. But some spots are absolute paradises for fans looking to connect with the community.</p>
+            <figure>
+                <img src="images/where-lego.png" alt="A local LEGO retail location, with custom models and large inventory" width="700" height="400" />
+                <figcaption>A LEGO retail store with custom-built models.</figcaption>
+            </figure>
+            <div class="card-row">
+                <div class="card">
+                    <h3>Official LEGO Stores</h3>
+                    <p>The absolute mother ship. Going to an official store lets you hit the Pick-a-Brick wall, build custom minifigures, and see massive, intricate display models built by master designers up close.</p>
+                </div>
+                <div class="card">
+                    <h3>Independent Brick Shops</h3>
+                    <p>Local, non-franchise brick stores are hidden gems. They are the best spots for hunting down retired vintage sets, buying bulk pieces by the pound, and chatting with fellow adult fans (AFOLs).</p>
+                </div>
+                <div class="card">
+                    <h3>Conventions &amp; LUGs</h3>
+                    <p>Joining a local LEGO User Group (LUG) or hitting a regional convention completely changes the hobby. Seeing giant collaborative city layouts and custom masterpieces in person is so inspiring.</p>
+                </div>
+            </div>
+            <table>
+                <caption>Great Ways to Experience the Hobby</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Location</th>
+                        <th scope="col">Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Official Retail Stores</td><td>New releases, custom minifigs, and the Pick-a-Brick wall</td></tr>
+                    <tr><td>Local Buy/Sell/Trade Shops</td><td>Finding rare minifigures, bulk bricks, and retired sets</td></tr>
+                    <tr><td>Home Build Station</td><td>Sorting, deep-focus custom designing, and long building sessions</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- HOW -->
+        <section id="how">
+            <h2>How to Get Building</h2>
+            <p>Getting into LEGO is incredibly easy, and you don't need a massive budget or a dedicated room to start creating. Whether you want to follow step-by-step instructions or just mess around with a big tub of random bricks, here is the best way to jump in.</p>
+            <figure>
+                <img src="images/how-lego.png" alt="A collection of beginner LEGO polybags" width="700" height="400" />
+                <figcaption>You don't need a massive collection to start creating.</figcaption>
+            </figure>
+            <ol>
+                <li><strong>Choose your building style.</strong> Some fans love the zen focus of following official instruction booklets exactly, while others prefer "free-building" completely custom creations (MOCs) from scratch.</li>
+                <li><strong>Start small with themed sets.</strong> Don't jump straight into a 6,000-piece flagship model. Grab a small, budget-friendly set from a theme you already love—like Creator 3-in-1, Star Wars, Speed Champions, or Botanical.</li>
+                <li><strong>Grab a classic brick box.</strong> If you want pure creative freedom, pick up a LEGO Classic medium or large brick box. It gives you a huge variety of colors, shapes, windows, and wheels to build whatever comes to mind.</li>
+                <li><strong>Get inspired by the community.</strong> Check out build logs on YouTube, browse designs on Rebrickable to find alternative builds for sets you already own, and see how other builders solve tricky design problems.</li>
+            </ol>
+            <div class="card-row">
+                <div class="card">
+                    <h3>Casual Building</h3>
+                    <p>Grab small starter sets or polybags under $20. They are quick, super satisfying to build, and look awesome on a desk or shelf without taking over your space.</p>
+                </div>
+                <div class="card">
+                    <h3>Advanced Designing</h3>
+                    <p>Dive into complex modular buildings, intricate Technic machinery, or digital prototyping using free software like BrickLink Studio on your computer.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY -->
+        <section id="why">
+            <h2>Why I Love LEGO</h2>
+            <p>For me, LEGO isn't just something to mess around with when I'm bored. It's a genuine passion and something I constantly look forward to. There's just nothing quite like the feeling of opening a new box and diving into a build.</p>
+            <p>It's my absolute favorite way to unwind after a crazy day of classes and work. When my brain is completely fried, sitting down with a massive pile of bricks completely resets my mind in a way that nothing else can.</p>
+            <figure>
+                <img src="images/why-lego.png" alt="Someone happily sorting and building a LEGO model at a cozy desk" width="700" height="400" />
+                <figcaption>Literally nothing beats the satisfying 'snap' of two bricks locking together.</figcaption>
+            </figure>
+            <div class="card-row">
+                <div class="card">
+                    <h3>Pure Creation &amp; Design</h3>
+                    <p>I absolutely love the design side of it. Unplugging from screens and building something real with your own hands is so rewarding. It's amazing to watch an idea in your head turn into a physical model brick by brick.</p>
+                </div>
+                <div class="card">
+                    <h3>Incredible World Building</h3>
+                    <p>The sheer scale of what you can create is wild! It stretches your spatial reasoning, unlocks your imagination, and lets you figure out how tiny, intricate connections work together to form a massive structural masterpiece.</p>
+                </div>
+                <div class="card">
+                    <h3>The Ultimate Decompress</h3>
+                    <p>It's the perfect stress reliever. Clicking pieces together gives you this awesome, instant feeling of accomplishment. It's just a fun, creative, and therapeutic escape from real-world chaos.</p>
+                </div>
+            </div>
+            <p>Honestly, the engineering that goes into these sets blows my mind every single time. Seeing how designers use everyday bricks in clever, unexpected ways to create crazy details is just so inspiring. I'm a massive fan, and that's exactly why LEGO is my ultimate hobby!</p>
+        </section>
     </main>
-    <div data-include="components/footer.html"></div>
-    
-    <script src="scripts/include_components.js"></script>
-  </body>
+
+    <footer>
+        <p>Designed by <a href="gutierrezdesign.com/">Gutierrez Design, Inc.</a> ©<span id="current-year">2026</span></p>
+        <div class="footer-links">
+            <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener">Validate HTML</a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">Validate CSS</a>
+            <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/jgutie17/itis3135/hobby" target="_blank" rel="noopener">Check Accessibility</a>
+        </div>
+        <p>&#9553; Jorrin Gutierrez &#9553; ITIS 3135 &#9553; UNC Charlotte &#9553;</p>
+    </footer>
+    <script>
+        (function () {
+            var links    = document.querySelectorAll('.nav-link');
+            var sections = document.querySelectorAll('section');
+
+            function showSection(id) {
+                sections.forEach(function (s) {
+                    if (s.id === id) {
+                        s.classList.add('active');
+                    } else {
+                        s.classList.remove('active');
+                    }
+                });
+                links.forEach(function (a) {
+                    if (a.dataset.target === id) {
+                        a.classList.add('active');
+                    } else {
+                        a.classList.remove('active');
+                    }
+                });
+            }
+
+            links.forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    showSection(this.dataset.target);
+                    window.scrollTo(0, 0);
+                });
+            });
+        })();
+    </script>
+
+</body>
 </html>
