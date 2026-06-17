@@ -1,0 +1,221 @@
+/* ==========================================================================
+   THE JOLLY GATOR'S SWAMP LOUNGE - STYLE GUIDE (style.css)
+   Course: ITIS 3135 | Designer: Jorrin Gutierrez
+   Theme: A premium, cozy, swamp-inspired aesthetic blending rich moss greens, 
+          deep bayou teals, and warm amber accents.
+   ========================================================================== */
+
+/* --- Custom Property Variables --- */
+:root {
+    --primary-dark: #122620;       /* Deep Cypress / Charcoal Black */
+    --primary-accent: #2c5e43;     /* Rich Moss Green */
+    --secondary-accent: #a27b5c;   /* Warm Amber / Toasted Cattail */
+    --light-bg: #f4f7f5;           /* Frosted Swamp Mist / Soft Light Gray */
+    --white: #ffffff;
+    --text-color: #2b3a32;         /* Dark Olive Slate for high readability */
+    --border-color: #d1dcd6;       /* Soft Reed Gray */
+    --font-heading: 'Georgia', serif;
+    --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --max-width: 1000px;
+}
+
+/* --- Base & Reset Elements --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 11pt;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+/* --- Layout Container --- */
+main {
+    max-width: var(--max-width);
+    margin: 30px auto;
+    padding: 25px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(18, 38, 32, 0.05);
+    border: 1px solid var(--border-color);
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+h1 { font-size: 22pt; text-align: center; letter-spacing: -0.5px; }
+h2 { font-size: 16pt; border-left: 5px solid var(--primary-accent); padding-left: 12px; margin-top: 10px; }
+h3 { font-size: 13pt; color: var(--secondary-accent); }
+
+p {
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+strong {
+    color: var(--primary-dark);
+}
+
+/* --- Header Component Styling --- */
+header {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--secondary-accent);
+}
+
+header h1 {
+    color: var(--white);
+    font-size: 24pt;
+    margin-bottom: 15px;
+}
+
+header h2 {
+    color: var(--secondary-accent);
+    font-size: 14pt;
+    border-left: none;
+    padding-left: 0;
+    margin-top: 25px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* --- Navigation Bars --- */
+nav {
+    margin: 10px 0;
+}
+
+nav a {
+    color: #cbdad0; /* Muted light sage */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 10pt;
+    padding: 6px 8px;
+    display: inline-block;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--white);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Specific separator adjustments if literal string symbols are used */
+nav span, nav {
+    color: var(--secondary-accent);
+}
+
+/* --- Footer Component Styling --- */
+footer {
+    background-color: var(--primary-dark);
+    color: #a4bfae;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 50px;
+    font-size: 9.5pt;
+    border-top: 4px solid var(--primary-accent);
+}
+
+footer nav a {
+    color: #a4bfae;
+}
+
+footer nav a:hover {
+    color: var(--secondary-accent);
+    background-color: transparent;
+}
+
+footer p {
+    text-align: center;
+    margin: 12px 0;
+}
+
+footer a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: var(--secondary-accent);
+}
+
+/* --- Custom Feature Elements (For FCC Pages) --- */
+
+/* Form Elements (survey.html) */
+form {
+    background-color: var(--light-bg);
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--primary-dark);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 10pt;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid var(--primary-accent);
+}
+
+/* Grid-style table presentation (inventory.html / cards.html) */
+.swamp-grid-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.swamp-grid-table th {
+    background-color: var(--primary-accent);
+    color: var(--white);
+    font-weight: bold;
+    text-align: left;
+    padding: 12px;
+}
+
+.swamp-grid-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.swamp-grid-table tr:nth-child(even) {
+    background-color: rgba(44, 94, 67, 0.04);
+}
+
+/* Callout Accent Box */
+.bayou-callout {
+    background-color: #eef3f0;
+    border-left: 4px solid var(--secondary-accent);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 4px 4px 0;
+}
