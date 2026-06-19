@@ -7,25 +7,25 @@ body {
     padding: 0;
 }
 
-header, main, footer {
+/* 
+  Removed header and footer from here so they 
+  no longer have a 950px max-width restriction. 
+*/
+main {
     max-width: 950px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 30px 20px;
     box-sizing: border-box;
 }
 
-main {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 header {
+    width: 100%;
+    box-sizing: border-box;
     text-align: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 40px;
+    padding: 30px 20px;
+    background-color: #1e293b;
 }
-
-
 
 h1 {
     color: #ffffff;
@@ -99,20 +99,23 @@ blockquote p {
 }
 
 footer {
+    width: 100%;
+    box-sizing: border-box;
     text-align: center;
     font-size: 0.9rem;
     color: #64748b;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: 40px;
-    padding-top: 30px;
+    padding: 25px 20px;
+    background-color: #1e293b;
 }
 
 a {
-            color: #ffffff;
-            font-weight: bold;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
 
 a:hover {
     color: #8f8f8f;

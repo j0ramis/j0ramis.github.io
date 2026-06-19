@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey | The Jolly Gator</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="styles/jollygator.css"> 
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
   </head>
   
@@ -33,22 +33,24 @@
         </select>
 
         <p><strong>Are you celebrating a special occasion?</strong></p>
-        <label>
-          <input type="radio" name="recommend" value="yes" checked /> Yes, it's a celebration!
+        <!-- Added inline classes here -->
+        <label class="inline-label">
+          <input class="inline-input" type="radio" name="recommend" value="yes" checked /> Yes, it's a celebration!
         </label>
-        <label>
-          <input type="radio" name="recommend" value="no" /> No, just hungry for swamp food.
+        <label class="inline-label">
+          <input class="inline-input" type="radio" name="recommend" value="no" /> No, just hungry for swamp food.
         </label>
 
         <p><strong>Select your preferred Bayou Appetizers:</strong></p>
-        <label>
-          <input type="checkbox" value="gator-bites" /> Signature Alligator Bites
+        <!-- Added inline classes here -->
+        <label class="inline-label">
+          <input class="inline-input" type="checkbox" value="gator-bites" /> Signature Alligator Bites
         </label>
-        <label>
-          <input type="checkbox" value="crawfish-dip" /> Smoked Crawfish Dip
+        <label class="inline-label">
+          <input class="inline-input" type="checkbox" value="crawfish-dip" /> Smoked Crawfish Dip
         </label>
-        <label>
-          <input type="checkbox" value="hushpuppies" /> Jalapeño Hushpuppies
+        <label class="inline-label">
+          <input class="inline-input" type="checkbox" value="hushpuppies" /> Jalapeño Hushpuppies
         </label>
 
         <label for="comments">Food Allergies or Special Requests:</label>

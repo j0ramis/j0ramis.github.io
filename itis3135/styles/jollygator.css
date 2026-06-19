@@ -43,6 +43,12 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(18, 38, 32, 0.05);
     border: 1px solid var(--border-color);
+
+    background-image: url('image/jollygator.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* --- Typography --- */
@@ -51,18 +57,19 @@ h1 {
     text-align: center; 
     letter-spacing: -0.5px; 
     font-family: var(--font-heading);
-    color: var(--primary-dark);
+    background-color: var(--primary-accent);
+    border-radius: 6px;
+    color: var(--white);
     margin-bottom: 15px;
     font-weight: 700;
 }
 
 h2 { 
     font-size: 16pt; 
-    border-left: 5px solid var(--primary-accent); 
     padding-left: 12px; 
     margin-top: 10px;
     font-family: var(--font-heading);
-    color: var(--primary-dark);
+    color: var(--white);
     margin-bottom: 15px;
     font-weight: 700; 
     
@@ -185,30 +192,6 @@ input:focus, select:focus, textarea:focus {
     outline: 2px solid var(--primary-accent);
 }
 
-/* --- Tables (inventory.html / cards.html) --- */
-.swamp-grid-table {
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-.swamp-grid-table th, 
-.swamp-grid-table td {
-    text-align: left;
-}
-
-.swamp-grid-table th {
-    background-color: var(--primary-accent);
-    color: var(--white);
-}
-
-.swamp-grid-table td {
-    border-bottom: 1px solid var(--border-color);
-}
-
-.swamp-grid-table tr:nth-child(even) {
-    background-color: rgba(44, 94, 67, 0.04);
-}
-
 /* --- Callout Accent Box --- */
 .bayou-callout {
     background-color: #eef3f0;
@@ -217,3 +200,19 @@ input:focus, select:focus, textarea:focus {
     margin: 20px 0;
     border-radius: 0 4px 4px 0;
 }
+
+/* Keeps the radio buttons and checkboxes on the same line as the text */
+.inline-label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+/* Overrides the 100% width applied to other inputs */
+.inline-input {
+    width: auto;
+    margin-right: 10px;
+    margin-bottom: 0; /* Removes bottom margin so it centers vertically */
+}
+
