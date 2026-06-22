@@ -82,6 +82,13 @@ cite {
     display: block;
 }
 
+.validators a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            justify-self: center;
+        }
+
 blockquote {
     background-color: rgba(147, 197, 253, 0.06);
     border-left: 4px solid #60a5fa;

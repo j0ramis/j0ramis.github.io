@@ -51,6 +51,13 @@ main {
     background-attachment: fixed;
 }
 
+.validators a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            justify-self: center;
+        }
+
 /* --- Typography --- */
 h1 { 
     font-size: 22pt; 
