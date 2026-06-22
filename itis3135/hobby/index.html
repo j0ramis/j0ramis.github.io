@@ -101,7 +101,6 @@
 
     footer .footer-links {
         display: flex;
-        flex-wrap: wrap;
         gap: 10px;
         justify-content: center;
         margin-top: 10px;
@@ -476,9 +475,13 @@
     <footer>
         <p>Designed by <a href="../gutierrezdesign.com/">Gutierrez Design, Inc.</a> ©<span id="current-year">2026</span></p>
         <div class="footer-links">
-            <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener">Validate HTML</a>
-            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">Validate CSS</a>
+            <a href="https://validator.w3.org/check?uri=referer" id="validation-link-html">
+                <img src="../images/button_validation_html5.png" width="88" height="31" alt="Validate webpage HTML.">
+            </a>
             <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/jgutie17/itis3135/hobby" target="_blank" rel="noopener">Check Accessibility</a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation-link-css">
+                <img src="https://jigsaw.w3.org/css-validator/images/vcss" width="88" height="31" alt="Valid CSS.">
+            </a>
         </div>
         <p>&#9553; Jorrin Gutierrez &#9553; ITIS 3135 &#9553; UNC Charlotte &#9553;</p>
     </footer>
