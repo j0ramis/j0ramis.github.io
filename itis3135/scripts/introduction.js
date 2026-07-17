@@ -281,15 +281,21 @@ ${linkXML}
     }
 
     function clearForm() {
-        form.reset();
-        resultSection.innerHTML = "";
-        const outputArticle = document.getElementById("generated-code-output");
-
-        if (outputArticle) {
-            outputArticle.remove();
-        }
+        // Select all inputs and textareas inside the form to wipe them blank
+        const inputs = form.querySelectorAll("input, textarea");
+        
+        inputs.forEach((element) => {
+            // Clear file inputs safely
+            if (element.type === "file") {
+                element.value = ""; 
+            } 
+            // Wipes text, URLs, and textareas, but bypasses the buttons themselves
+            else if (element.type !== "button" && element.type !== "submit" && element.type !== "reset") {
+                element.value = "";
+            }
+        });
     }
-
+    
     form.addEventListener("submit", renderIntroduction);
     document.getElementById("add-course").addEventListener("click", addCourse);
     document.getElementById("clear-form").addEventListener("click", clearForm);
