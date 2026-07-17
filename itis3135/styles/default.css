@@ -38,7 +38,7 @@ body {
 main {
     max-width: var(--max-width);
     margin: 30px auto;
-    padding: 25px;
+    padding: 22px;
     background-color: var(--white);
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(18, 38, 32, 0.05);
@@ -104,7 +104,6 @@ h6 {
 }
 
 p {
-    margin-bottom: 18px;
     text-align: justify;
 }
 
@@ -121,7 +120,7 @@ header, footer {
 /* --- Header Component --- */
 header {
     color: var(--white);
-    padding: 30px 20px;
+    padding: 20px 20px;
     border-bottom: 4px solid var(--secondary-accent);
 }
 
