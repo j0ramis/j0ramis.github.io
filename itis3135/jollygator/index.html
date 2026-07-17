@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jolly Gator | Home</title>
+    <link rel="icon" type="image/x-icon" href="images/jolly-gator-hot-sauce.ico"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #fff8e7; /* Light Cream */
+            color: #2b2625; /* Charcoal */
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #243321; /* Deep Gator Green */
+            border-top: 4px solid #d34e36; /* Cayenne Red */
+            color: #fff8e7; /* Light Cream */
+            font-size: 0.9rem;
+            margin-top: 50px;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #f1a83a; /* Bayou Gold */
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: #fff8e7;
+            text-decoration: underline;
+        }
+
+        header {
+            background-color: #243321; /* Deep Gator Green */
+            padding: 30px 20px;
+            border-bottom: 4px solid #d34e36;
+        }
+
+        h1 {
+            color: #fff8e7;
+            font-size: 2.2rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .tagline {
+            color: #f1a83a; /* Bayou Gold */
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        nav a {
+            background-color: #3b5335; /* Swamp Green */
+            color: #fff8e7;
+            font-size: 1.05rem;
+            font-weight: 600;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #d34e36; /* Cayenne Red */
+            color: #fff8e7;
+        }
+
+        main {
+            margin: 0 auto;
+            max-width: 950px;
+            padding: 40px 20px;
+        }
+
+        section {
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h2 {
+            border-bottom: 3px solid #3b5335;
+            color: #243321;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: #d34e36;
+            font-size: 1.3rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        figure {
+            background-color: #243321;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        figure img {
+            border: 3px solid #f1a83a;
+            display: block;
+            height: auto;
+            margin: 0 auto;
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        figcaption {
+            color: #fff8e7;
+            font-size: 0.9rem;
+            margin-top: 12px;
+        }
+
+        figcaption em {
+            color: #f1a83a;
+            font-style: italic;
+        }
+
+        .card-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .card {
+            background-color: #243321;
+            border-left: 5px solid #f1a83a;
+            color: #fff8e7;
+            flex: 1 1 260px;
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        .card p {
+            color: #e2ded5;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .price-tag {
+            display: inline-block;
+            background-color: #d34e36;
+            color: #fff8e7;
+            padding: 3px 8px;
+            font-weight: 700;
+            border-radius: 3px;
+            margin-top: 10px;
+        }
+
+        /* Interactive Builder Styles */
+        .builder-container {
+            background-color: #3b5335;
+            color: #fff8e7;
+            padding: 25px;
+            border-radius: 6px;
+            margin-top: 30px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.05rem;
+            cursor: pointer;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #d34e36;
+        }
+
+        .summary-box {
+            background-color: #243321;
+            border: 2px solid #f1a83a;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+
+        /* Status Banner Styles */
+        .status-banner {
+            padding: 15px;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-size: 1.1rem;
+        }
+
+        .status-open {
+            background-color: #3b5335;
+            color: #fff8e7;
+            border: 2px solid #f1a83a;
+        }
+
+        .status-closed {
+            background-color: #d34e36;
+            color: #fff8e7;
+            border: 2px solid #243321;
+        }
+
+        /* Tables */
+        table {
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            margin: 25px 0;
+            width: 100%;
+            background-color: #243321;
+            color: #fff8e7;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        caption {
+            color: #243321;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3b5335;
+            color: #fff8e7;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 3px solid #f1a83a;
+        }
+
+        td {
+            border-bottom: 1px solid #3b5335;
+            padding: 12px;
+        }
+
+        tr:hover td {
+            background-color: #3b5335;
+        }
+
+        /* Forms Configuration */
+        label {
+            color: #ffffff;
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            margin-top: 15px;
+        }
+
+        input[type="text"], select, textarea {
+            background-color: #fff;
+            border-radius: 4px;
+            color: #2b2625;
+            display: block;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        input[type="text"]:focus, select:focus, textarea:focus {
+            outline: 3px solid #f1a83a;
+            border-color: #d34e36;
+        }
+
+        .mirror-box {
+            background-color: #e2ded5;
+            border-left: 4px solid #d34e36;
+            padding: 15px;
+            margin: 15px 0;
+            max-width: 500px;
+            min-height: 60px;
+            word-wrap: break-word;
+        }
+
+        button[type="submit"] {
+            background-color: #d34e36;
+            border: none;
+            color: #fff8e7;
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 12px 24px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #243321;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 650px) {
+            .card-row {
+                flex-direction: column;
+            }
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                text-align: center;
+            }
+        }
+    </style>
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Asynchronous HTML Framework Loaders -->
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <!-- HOME -->
+        <section id="home" class="active">
+            <h2>Welcome to the Bayou</h2>
+            <p>Welcome to Jolly Gator Hot Sauce Co., where we craft small-batch, swamp-inspired artisan hot sauces, fiery dry rubs, and vibrant barbecue essentials designed to give your backyard grill-outs a clean, memorable kick.</p>
+            <p>We blend freshly harvested local peppers with authentic southern ingredients to create depth of flavor that complements chicken, ribs, seafood, and structural tailgating spreads alike.</p>
+            
+            <figure>
+                <img src="images/jolly-gator-promo.png" alt="Artisan hot sauce bottles sitting next to a smoky outdoor backyard grill setup" width="700" height="400" />
+                <figcaption>Our Signature Batches.<br><em>Small-batch execution guarantees intense balance and crisp consistency. (Source: ChatGPT Generative Image)</em></figcaption>
+            </figure>
+
+            <h3>Featured Spice Levels</h3>
+            <div class="card-row">
+                <div class="card">
+                    <h3>Mild Bayou Kick</h3>
+                    <p>A smooth, tangy blend of aged cayenne, roasted garlic, and local honey. Perfect for everyday splashing without overwhelming your palate.</p>
+                </div>
+                <div class="card">
+                    <h3>Classic Smoked Alligator</h3>
+                    <p>Our flag-bearer. Medium-heat jalapeños oak-smoked over open pits, mixed with apple cider vinegar and signature swamp aromatics.</p>
+                </div>
+                <div class="card">
+                    <h3>Swamp Inferno</h3>
+                    <p>Pure heat. A bold combination of blistering ghost peppers and red habaneros balanced with dynamic citrus notes. Approach with caution.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about">
+            <h2>Our Story</h2>
+            <p>Founded deep within the coastal lowlands, Jolly Gator started as a backyard passion project driven by engineering structural barbecue recipes that don't take shortcuts. We believe great sauce balances clean acidity with sustained heat infrastructure.</p>
+            <p>Every single bottle is filled, labeled, and certified by hand using sustainable food production guidelines and transparent manufacturing channels.</p>
+            
+            <figure>
+                <img src="images/jolly-gator-list.png" alt="A visual of all sauces made by Jolly Gator.">
+                <figcaption>All Sauces Ever Produced (Source: ChatGPT Generative Image)</figcaption>
+            </figure>
+
+            <table>
+                <caption>Product Release Timeline &amp; Milestones</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Batch Line</th>
+                        <th scope="col">Primary Pepper Profile</th>
+                        <th scope="col">Scoville Rating</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Note: Spaces added around tildes to maintain standalone string isolation during validation -->
+                    <tr><td>Mild Bayou Kick</td><td>Aged Red Cayenne</td><td> ~ 2,500 SHU </td><td>Active Production</td></tr>
+                    <tr><td>Classic Smoked Alligator</td><td>Oak-Smoked Jalapeño</td><td> ~ 8,000 SHU </td><td>Active Production</td></tr>
+                    <tr><td>Swamp Inferno</td><td>Ghost Pepper &amp; Habanero</td><td> ~ 450,000 SHU </td><td>Seasonal Rotation</td></tr>
+                    <tr><td>Chipotle Citrus Glaze</td><td>Meco Chipotle &amp; Blood Orange</td><td> ~ 5,000 SHU </td><td>Archived Batch</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SHOP -->
+        <section id="shop">
+            <h2>Artisan Marketplace</h2>
+            <p>Select individual small-batch bottles or design a custom bundle pack below. Standard shipments depart every Monday afternoon.</p>
+            <figure>
+                <img src="images/jolly-gator-sauces.png" alt="A visual of all sauces available for sale from Jolly Gator.">
+                <figcaption>Our Signature Sauces (Source: ChatGPT Generative Image)</figcaption>
+            </figure>
+
+            <div class="card-row">
+                <div class="card">
+                    <h3>Mild Bayou Kick (5oz)</h3>
+                    <p>Sweet, tangy entry-level tableside companion.</p>
+                    <span class="price-tag">$8.00</span>
+                </div>
+                <div class="card">
+                    <h3>Classic Smoked Alligator (5oz)</h3>
+                    <p>Deep wood-fired complexity with mid-level punch.</p>
+                    <span class="price-tag">$9.50</span>
+                </div>
+                <div class="card">
+                    <h3>Swamp Inferno (5oz)</h3>
+                    <p>Blistering, high-octane capsaicin rush.</p>
+                    <span class="price-tag">$12.00</span>
+                </div>
+            </div>
+
+            <!-- Custom Interactive Builder Interface -->
+            <div class="builder-container">
+                <h3>Build a Custom Pitmaster Bundle</h3>
+                <p>Select items below to configure your specialized care pack collection. Total updates automatically.</p>
+                
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="sauce-option" value="Mild Bayou Kick" data-price="8.00" />
+                        Mild Bayou Kick — $8.00
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="sauce-option" value="Classic Smoked Alligator" data-price="9.50" />
+                        Classic Smoked Alligator — $9.50
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="sauce-option" value="Swamp Inferno" data-price="12.00" />
+                        Swamp Inferno — $12.00
+                    </label>
+                </div>
+
+                <div class="summary-box">
+                    <p><strong>Selected Items:</strong> <span id="bundle-items">None chosen yet</span></p>
+                    <p><strong>Item Count:</strong> <span id="bundle-count">0</span></p>
+                    <p><strong>Estimated Total:</strong> $<span id="bundle-total">0.00</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOURS -->
+        <section id="hours">
+            <h2>Operating Hours</h2>
+
+            <figure>
+                <img src="images/jolly-gator-hot-sauce.png" alt="The logo for Jolly Gator Hot Sauces Co." width="450" height="450">
+                <figcaption>Our company logo (Source: ChatGPT Generative Image)</figcaption>
+            </figure>
+
+            <p>Our production warehouse and retail sales desks are open weekly. Stop by for sample tastings, bulk conversions, or to pick up dynamic web orders directly.</p>
+
+            <!-- Dynamic Retail Status Target -->
+            <div id="status-banner" class="status-banner">Checking shop availability...</div>
+
+            <table>
+                <caption>Retail &amp; Order Pick-Up Schedule</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Monday – Friday</td><td>10:00 AM – 6:00 PM</td></tr>
+                    <tr><td>Saturday</td><td>10:00 AM – 4:00 PM</td></tr>
+                    <tr><td>Sunday</td><td>Closed for Backyard Barbecues</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- LOCATIONS -->
+        <section id="locations">
+            <h2>Locations</h2>
+            <p>Find our signature gator selections throughout local regional networks or purchase straight from our central production warehouse facilities.</p>
+            
+            <figure>
+                <img src="images/jolly-gator-store.png" alt="An example of a store of Jolly Gator.">
+                <figcaption>Our store in Charlotte (Source: ChatGPT Generative Image)</figcaption>
+            </figure>
+
+            <div class="card-row">
+                <div class="card">
+                    <h3>Central Smokehouse Hub</h3>
+                    <p>104 Bayou Bluffs Trail<br />Cary, NC 27513</p>
+                    <p>Full inventory catalog, sample counters, and factory tours.</p>
+                </div>
+                <div class="card">
+                    <h3>Charlotte Retail Station</h3>
+                    <p>9201 University City Blvd<br />Charlotte, NC 28223</p>
+                    <p>Direct weekend distributions located adjacent to the campus zone.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT US -->
+        <section id="contact">
+            <h2>Drop Us a Line</h2>
+            
+            <figure>
+                <img src="images/jolly-gator-hot-sauce.png" alt="The logo for Jolly Gator Hot Sauces Co." width="450" height="450">
+                <figcaption>Our company logo (Source: ChatGPT Generative Image)</figcaption>
+            </figure>
+
+            <p>Have questions regarding bulk catering orders, specific wholesale pipelines, or complex custom spice requests? Submit the structural feedback sheet below.</p>
+            
+            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Form submitted successfully!');">
+                <label for="user-name">Your Full Name</label>
+                <input type="text" id="user-name" name="userName" placeholder="Jorrin Gutierrez" required />
+
+                <label for="contact-reason">Reason for Inquiry</label>
+                <select id="contact-reason" name="reason">
+                    <option value="wholesale">Wholesale &amp; Retail Inquiries</option>
+                    <option value="feedback">Product Feedback &amp; Ideas</option>
+                    <option value="custom">Custom Heat Level Commissions</option>
+                </select>
+
+                <label for="user-message">Message Details</label>
+                <textarea id="user-message" name="message" placeholder="Type your recipe thoughts or questions here..." required></textarea>
+
+                <!-- Dynamic text mirror element for user tracking -->
+                <p><strong>Live Typing Preview:</strong></p>
+                <div id="mirror-preview" class="mirror-box">Your live message content will automatically sync here...</div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <!-- Core Architecture Scripts -->
+    <script src="scripts/jollygator.js" defer></script>
+    <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
+</body>
+</html>
