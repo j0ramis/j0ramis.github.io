@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorrin Gutierrez's Jolly Gator | ITIS3135 | Introduction Form</title>
+    
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- This div is required as the placeholder for the shared header component. -->
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Introduction Form</h2>
+        
+        <!-- These IDs and classes connect the form controls, course entries, and generated output to introduction.js. -->
+        <section id="form-section">
+            <h3>Please submit the form below.</h3>
+            <form id="intro-form">
+                <fieldset>
+                    <legend>Name Information</legend>
+                    <label for="first-name">First Name:</label>
+                    <input id="first-name" placeholder="Enter first name" required="" type="text" value="Jorrin">
+                    
+                    <label for="middle-name">Middle Name or Initial:</label>
+                    <input id="middle-name" placeholder="Enter middle name or initial" type="text" value="">
+                    
+                    <label for="nickname">Nickname or Preferred Name:</label>
+                    <input id="nickname" placeholder="Enter nickname" type="text" value="Jolly Gator">
+                    
+                    <label for="last-name">Last Name:</label>
+                    <input id="last-name" placeholder="Enter last name" required="" type="text" value="Gutierrez">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Introduction Header Details</legend>
+                    <label for="acknowledgment">Acknowledgment Statement:</label>
+                    <input id="acknowledgment" placeholder="Enter acknowledgment statement" required="" type="text" value="I understand that this page is part of my ITIS3135 coursework.">
+                    
+                    <label for="acknowledgment-date">Acknowledgment Date:</label>
+                    <input id="acknowledgment-date" placeholder="Example: June 29, 2026" required="" type="text" value="July 16, 2026">
+                    
+                    <label for="mascot-adjective">Mascot Adjective:</label>
+                    <input id="mascot-adjective" placeholder="Enter mascot adjective" required="" type="text" value="Jolly">
+                    
+                    <label for="mascot-animal">Mascot Animal:</label>
+                    <input id="mascot-animal" placeholder="Enter mascot animal" required="" type="text" value="Gator">
+                    
+                    <label for="divider">Divider:</label>
+                    <input id="divider" placeholder="Example: |, ~, -" required="" type="text" value="|">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Picture Information</legend>
+                    <label for="picture">Upload Your Own Picture:</label>
+                    <input accept="image/*" id="picture" type="file">
+                    
+                    <label for="picture-caption">Picture Caption:</label>
+                    <input id="picture-caption" placeholder="Enter picture caption" required="" type="text" value="Me enjoying some free time and working on a new LEGO build.">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Personal Introduction</legend>
+                    <label for="personal-statement">Personal Statement:</label>
+                    <textarea id="personal-statement" placeholder="Enter a personal statement" required="">My name is Jorrin Gutierrez, and this introduction page shares my background in human-computer interaction, my prototyping projects, and my hobbies.</textarea>
+                    
+                    <label for="personal-background">Personal Background:</label>
+                    <textarea id="personal-background" placeholder="Enter personal background" required="">I am from Cary, NC. In my free time, I enjoy music, gaming (especially Zelda, The Last of Us, and Stardew Valley), 3D printing, and listening to audiobooks. I also have a huge passion for LEGO—from building sets to following the custom manufacturing and design process—and analyzing international soccer.</textarea>
+                    
+                    <label for="professional-background">Professional Background:</label>
+                    <textarea id="professional-background" placeholder="Enter professional background" required="">I have been actively building my portfolio through academic UX/UI projects. Recently, I have created wireframes and storyboards for a smart kitchen interface, a mobile apartment rental portal, and a LEGO-focused themed auction site called BlockBid.</textarea>
+                    
+                    <label for="academic-background">Academic Background:</label>
+                    <textarea id="academic-background" placeholder="Enter academic background" required="">I am a rising senior at UNC Charlotte pursuing a Bachelor of Science in Computer Science with a concentration in Human-Computer Interaction, with an expected graduation of June 2027.</textarea>
+                    
+                    <label for="subject-background">Background in this Subject:</label>
+                    <textarea id="subject-background" placeholder="Enter background in this subject" required="">I recently changed my concentration from AI, Robotics, and Gaming to focus entirely on HCI. I am very comfortable with computer hardware—having built my own desktop and upgraded the RAM on my Windows 11 laptop—and I'm looking forward to applying my design prototyping skills to web-based application development.</textarea>
+                    
+                    <label for="platform">Primary Computer Platform:</label>
+                    <input id="platform" placeholder="Enter computer platform" required="" type="text" value="Windows 11">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Courses</legend>
+                    <p>Add the courses you are taking and why you are taking them.</p>
+                    <div id="courses-container">
+                        <div class="course-entry">
+                            <label>Department:</label>
+                            <input class="course-department" placeholder="Example: ITCS" required="" type="text" value="ITIS">
+                            <label>Course Number:</label>
+                            <input class="course-number" placeholder="Example: 3112" required="" type="text" value="3135">
+                            <label>Course Name:</label>
+                            <input class="course-name" placeholder="Course name" required="" type="text" value="Web-Based Application Design and Development">
+                            <label>Reason for Taking:</label>
+                            <input class="course-reason" placeholder="Reason for taking this course" required="" type="text" value="To learn foundational front-end web development to support my HCI concentration.">
+                            <button class="delete-course" type="button">Delete Course</button>
+                        </div>
+                        <div class="course-entry">
+                            <label>Department:</label>
+                            <input class="course-department" placeholder="Example: ITIS" required="" type="text" value="ITIS">
+                            <label>Course Number:</label>
+                            <input class="course-number" placeholder="Example: 3135" required="" type="text" value="4350">
+                            <label>Course Name:</label>
+                            <input class="course-name" placeholder="Course name" required="" type="text" value="Design Prototyping">
+                            <label>Reason for Taking:</label>
+                            <input class="course-reason" placeholder="Reason for taking this course" required="" type="text" value="To build upon my UX/UI skills, storyboarding, and wireframing techniques.">
+                            <button class="delete-course" type="button">Delete Course</button>
+                        </div>
+                        <div class="course-entry">
+                            <label>Department:</label>
+                            <input class="course-department" placeholder="Example: ITIS" required="" type="text" value="STAT">
+                            <label>Course Number:</label>
+                            <input class="course-number" placeholder="Example: 3200" required="" type="text" value="2223">
+                            <label>Course Name:</label>
+                            <input class="course-name" placeholder="Course name" required="" type="text" value="Elements of Statistics II">
+                            <label>Reason for Taking:</label>
+                            <input class="course-reason" placeholder="Reason for taking this course" required="" type="text" value="A core requirement for my Computer Science degree path.">
+                            <button class="delete-course" type="button">Delete Course</button>
+                        </div>
+                    </div>
+                    <button id="add-course" type="button">Add Course</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Quote and Extras</legend>
+                    <label for="quote">Quote:</label>
+                    <input id="quote" placeholder="Enter quote" required="" type="text" value="Good design is obvious. Great design is transparent.">
+                    
+                    <label for="quote-author">Quote Author:</label>
+                    <input id="quote-author" placeholder="Enter quote author" required="" type="text" value="Joe Sparano">
+                    
+                    <label for="funny-thing">Funny Thing:</label>
+                    <input id="funny-thing" placeholder="Optional funny thing" type="text" value="I am so dedicated to LEGO that I managed to theme an entire academic wireframing project around a custom brick auction site called BlockBid.">
+                    
+                    <label for="share">Something I Would Like to Share:</label>
+                    <input id="share" placeholder="Optional thing to share" type="text" value="I am incredibly passionate about international soccer tactics and love breaking down the tactical identities and rosters of national teams during tournaments and friendlies.">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Links</legend>
+                    <label for="link-one-name">Link 1 Name:</label>
+                    <input id="link-one-name" placeholder="Example: LinkedIn" type="text" value="LinkedIn">
+                    <label for="link-one-url">Link 1 URL:</label>
+                    <input id="link-one-url" placeholder="https://www.linkedin.com" type="url" value="https://www.linkedin.com/in/jorringutierrez/">
+                    <label for="link-two-name">Link 2 Name:</label>
+                    <input id="link-two-name" placeholder="Example: GitHub" type="text" value="GitHub">
+                    <label for="link-two-url">Link 2 URL:</label>
+                    <input id="link-two-url" placeholder="https://github.com" type="url" value="https://github.com/j0ramis">
+                    <label for="link-three-name">Link 3 Name:</label>
+                    <input id="link-three-name" placeholder="Example: GitHub.io" type="text" value="GitHub.io">
+                    <label for="link-three-url">Link 3 URL:</label>
+                    <input id="link-three-url" placeholder="https://github.io" type="url" value="https://j0ramis.github.io">
+                    <label for="link-four-name">Link 4 Name:</label>
+                    <input id="link-four-name" placeholder="Example: freeCodeCamp" type="text" value="freeCodeCamp">
+                    <label for="link-four-url">Link 4 URL:</label>
+                    <input id="link-four-url" placeholder="https://www.freecodecamp.org" type="url" value="https://www.freecodecamp.org/jorring">
+                    <label for="link-five-name">Link 5 Name:</label>
+                    <input id="link-five-name" placeholder="Example: Codecademy" type="text" value="Codecademy">
+                    <label for="link-five-url">Link 5 URL:</label>
+                    <input id="link-five-url" placeholder="https://www.codecademy.com" type="url" value="https://www.codecademy.com/profiles/Jorrin.G">
+                </fieldset>
+
+                <div class="form-buttons">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                    <button id="clear-form" type="button">Clear</button>
+                    <button id="generate-html" type="button">Generate HTML</button>
+                    <button id="generate-json" type="button">Generate JSON</button>
+                    <button id="generate-xml" type="button">Generate XML</button>
+                </div>
+            </form>
+        </section>
+        
+        <div id="result-section"></div>
+        <section id="code-output-section">
+            <h3>Generated Code Output</h3>
+            <p>
+                Use the Generate HTML, Generate JSON, and Generate XML buttons to display
+                raw code based on the current form values.
+            </p>
+        </section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <!-- Scripts -->
+    <script src="scripts/include_components.js"></script>
+    <script src="scripts/defaultscripts.js"></script>
+    <script src="scripts/introduction.js"></script>
+    <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
+</body>
+</html>

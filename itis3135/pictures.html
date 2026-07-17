@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Jorrin Gutierrez's Jolly Gator | ITIS3135 | Pictures
+    </title>
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+    
+    
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  </head>
+  
+  <body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+      <h2>Everything Pictures</h2>
+        <p>
+            This page demonstrates how images behave in digital design environments. It illustrates 
+            how file formats, canvas dimensions, proportional resizing, intentional CSS distortion, 
+            and low-resolution enlargement impact visual quality and site performance.
+        </p>
+
+        <!-- Section 1: X-Mansion Prototyping Render -->
+        <section>
+            <h3>Demonstrating Image Manipulation with an Architectural Render</h3>
+            <p>
+                I chose this rendering asset because of its fine lines, structural geometry, and 
+                detailed textures. The original image, <code>xmansion-1200x875.png</code>, represents 
+                advanced modeling concepts within the studio and has an original dimension of 1200 by 875 pixels.
+            </p>
+            <figure>
+                <img alt="High-fidelity architectural render of the X-Mansion layout" height="438" src="images/xmansion-@lego-600x438.png" width="600">
+                <figcaption>A properly optimized, scaled-down PNG render displayed at 600x438 pixels.</figcaption>
+            </figure>
+
+            <article>
+                <h4>Original Render Formats</h4>
+                <p>Click to inspect the image in each structural format:</p>
+                <p>
+                    <a href="images/xmansion-@lego-1200x875.png" target="_blank">Original PNG (1200x875)</a> |
+                    <a href="images/xmansion-@lego-600x438.gif" target="_blank">GIF Version</a> |
+                    <a href="images/xmansion-@lego-600x438-greyscale.png" target="_blank">Greyscale PNG</a> |
+                    <a href="images/xmansion-@lego-600x438-bw.png" target="_blank">High-Contrast Black &amp; White PNG</a>
+                </p>
+            </article>
+
+            <article>
+                <h4>Downsizing Renders with CSS</h4>
+                <p>
+                    This example dynamically reduces the render file smaller with inline CSS while perfectly preserving the 1.37:1 ratio.
+                </p>
+                <figure>
+                    <img alt="Architectural render downsized using responsive CSS width" height="219" src="images/xmansion-@lego-600x438.png" style="width: 300px; height: auto;" width="300">
+                    <figcaption>The render displayed at a width of 300 pixels using responsive CSS rules.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Proper Reduction of Render with Editor</h4>
+                <p>
+                    This image was physically resampled in an editor beforehand. The asset file is lighter, 
+                    ensuring the layout maintains its precise proportions.
+                </p>
+                <figure>
+                    <img alt="Resized and optimized architectural render" height="438" src="images/xmansion-@lego-600x438.png" width="600">
+                    <figcaption>A pre-rendered 600 by 438 pixel asset maintaining sharp, non-blurry structural lines.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Improper Image Proportions with CSS</h4>
+                <p>
+                    These examples intentionally skew and compress the pre-rendered image by altering single dimensions 
+                    while holding the opposite axis rigid.
+                </p>
+                <figure>
+                    <img alt="Render squished horizontally" height="438" src="images/xmansion-@lego-600x438.png" width="402">
+                    <figcaption>Width squeezed by 33% (to 402px) while height remains locked at 438px.</figcaption>
+                </figure>
+                <figure>
+                    <img alt="Render squished heavily horizontally" height="438" src="images/xmansion-@lego-600x438.png" width="268">
+                    <figcaption>Width squeezed by 66% (to 268px) while height remains locked at 438px.</figcaption>
+                </figure>
+                <figure>
+                    <img alt="Render squished vertically" height="293" src="images/xmansion-@lego-600x438.png" width="600">
+                    <figcaption>Height squeezed by 33% (to 293px) while width remains locked at 600px.</figcaption>
+                </figure>
+                <figure>
+                    <img alt="Render squished heavily vertically" height="149" src="images/xmansion-@lego-600x438.png" width="600">
+                    <figcaption>Height squeezed by 66% (to 149px) while width remains locked at 600px.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Improper Enlarging with CSS</h4>
+                <p>
+                    Both boxes display at the same dimensions, but the second card was scaled up from a tiny source, 
+                    resulting in extreme pixelation and blurred details.
+                </p>
+                <figure>
+                    <img alt="Render from properly resampled file" height="438" src="images/xmansion-@lego-600x438.png" width="600">
+                    <figcaption>The 600 by 438 pixel optimized render showing pristine details.</figcaption>
+                </figure>
+                <figure>
+                    <img alt="Tiny low-resolution render asset stretched using CSS" height="438" src="images/xmansion-@lego-150x109.png" width="600">
+                    <figcaption>A tiny 150 by 109 thumbnail stretched to 600 by 438 pixels via CSS rules.</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Section 2: Argentina Analytics / Travel Photo -->
+        <section>
+            <h3>Demonstrating Image Manipulation with Studio Photography</h3>
+            <p>
+                I used this high-resolution photograph, <code>argentina-1920x1282.jpg</code>, to examine 
+                proportions on an organic landscape and layout. The original file spans 1920 by 1282 pixels 
+                with a clean 3:2 aspect ratio.
+            </p>
+            <figure>
+                <img alt="Studio landscape photo of Argentina" height="400" src="images/argentina-@alex-dos-santos-600x400.png" width="600">
+                <figcaption>A properly reduced, high-fidelity 600 by 400 pixel version of the photography.</figcaption>
+            </figure>
+
+            <article>
+                <h4>Original Photo Formats</h4>
+                <p>Click to inspect the image in each structural format:</p>
+                <p>
+                    <a href="images/argentina-@alex-dos-santos-1920x1282.jpg" target="_blank">Original JPG (1920x1282)</a> |
+                    <a href="images/argentina-@alex-dos-santos-600x400.gif" target="_blank">GIF Version</a> |
+                    <a href="images/argentina-@alex-dos-santos-600x400-greyscale.png" target="_blank">Greyscale PNG</a> |
+                    <a href="images/argentina-@alex-dos-santos-600x400-bw.png" target="_blank">High-Contrast Black &amp; White PNG</a>
+                </p>
+            </article>
+
+            <article>
+                <h4>Downsizing Photos with CSS</h4>
+                <p>
+                    This thumbnail relies on CSS auto-height calculation to correctly downsize while keeping the 3:2 ratio intact.
+                </p>
+                <figure>
+                    <img alt="Argentina landscape photo downsized using CSS" height="200" src="images/argentina-@alex-dos-santos-600x400.png" style="width: 300px; height: auto;" width="300">
+                    <figcaption>The landscape photograph scaled down to 300 pixels wide via CSS.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Proper Reduction of Photo with Editor</h4>
+                <p>
+                    This asset was pre-processed in an editor to scale down its file footprint without losing fine contrast details.
+                </p>
+                <figure>
+                    <img alt="Pre-optimized Argentina landscape photograph" height="400" src="images/argentina-@alex-dos-santos-600x400.png" width="600">
+                    <figcaption>A 600 by 400 pixel export maintaining its natural, non-distorted proportions.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Improper Image Proportions with CSS</h4>
+                <p>
+                    These boxes deliberately pinch and warp the photograph to demonstrate how layout distortion hurts design authenticity.
+                </p>
+                <figure>
+                    <img alt="Landscape photo pinched horizontally" height="400" src="images/argentina-@alex-dos-santos-600x400.png" width="402">
+                    <figcaption>Width reduced by 33% (to 402px) while height is locked at 400px.</figcaption>
+                </figure>
+                <figure>
+                    <img alt="Landscape photo pinched heavily horizontally" height="400" src="images/argentina-@alex-dos-santos-600x400.png" width="268">
+                    <figcaption>Width reduced by 66% (to 268px) while height is locked at 400px.</figcaption>
+                </figure>
+                <figure>
+                    <img alt="Landscape photo squished vertically" height="268" src="images/argentina-@alex-dos-santos-600x400.png" width="600">
+                    <figcaption>Height reduced by 33% (to 268px) while width is locked at 600px.</figcaption>
+                </figure>
+                <figure>
+                    <img alt="Landscape photo squished heavily vertically" height="136" src="images/argentina-@alex-dos-santos-600x400.png" width="600">
+                    <figcaption>Height reduced by 66% (to 136px) while width is locked at 600px.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Improper Enlarging with CSS</h4>
+                <p>
+                    Enlarging small raster graphics reveals the limitations of pixel interpolation in standard web browsers.
+                </p>
+                <figure>
+                    <img alt="Landscape photo from properly optimized file" height="400" src="images/argentina-@alex-dos-santos-600x400.png" width="600">
+                    <figcaption>The 600 by 400 photo displayed at its natural resolution.</figcaption>
+                </figure>
+                <figure>
+                    <img alt="Tiny low-resolution thumbnail stretched to look pixelated" height="400" src="images/argentina-@alex-dos-santos-150x100.png" width="600">
+                    <figcaption>A tiny 150 by 100 pixel thumbnail stretched up to 600 by 400 pixels using CSS styling.</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Reflection Section -->
+        <section>
+            <h3>AI Usage and Reflection</h3>
+            <p>
+                I used Gemini to plan this image analysis layout, calculate the exact, undistorted 
+                pixel parameters for scaling down the new <code>xmansion-1200x875.png</code> and 
+                <code>argentina-1920x1282.jpg</code> files, and generate semantic structural HTML templates.
+            </p>
+            <p>
+                The primary challenge was manually mapping out exact mathematical ratios (specifically 
+                the 1.37:1 ratio of the X-Mansion render and the clean 3:2 ratio of the Argentina photo) to 
+                ensure that the distortion calculations—like the 33% and 66% dimensional pinch tests—highlighted 
+                real distortion values. I learned how serving un-optimized images forces the browser to handle 
+                intensive resampling tasks, and how setting correct physical sizes keeps our layout fast and sharp.
+            </p>
+        </section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="scripts/include_components.js"></script>
+    <script src="scripts/defaultscripts.js"></script>
+
+    <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
+</body>
+
+</html>

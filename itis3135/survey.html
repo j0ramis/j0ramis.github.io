@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jorrin Gutierrez's Jolly Gator &#9553; ITIS3135 &#9553; Survey</title>
-    <link rel="stylesheet" href="styles/jollygator.css"> 
+    <title>Jorrin Gutierrez's Jolly Gator | ITIS3135 | Survey</title>
+    <link rel="stylesheet" href="styles/default.css"> 
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
   </head>
   
@@ -12,57 +13,83 @@
     <div data-include="components/header.html"></div>
 
     <main>
-      <h1 id="title">VIP Table Booking & Menu Selector</h1>
-      <p id="description">Reserve your spot and pre-select your swamp delicacies for the evening.</p>
+        <h2>Jolly Gator Creative Design Space Survey</h2>
+        <p>
+            This survey is for visitors interested in collaborating inside the Jolly Gator
+            Creative Design Spaces—a modular environment configured for custom 3D printing, 
+            brick modeling, interactive prototyping, and graphic illustration.
+        </p>
 
-      <form id="survey-form">
-        <label id="name-label" for="name">Guest Name:</label>
-        <input id="name" type="text" placeholder="Enter your full name" required />
+        <figure>
+          <img src="images/designing.jpg" alt="Showcasing design elements on a table with laptop">
+        </figure>
 
-        <label id="email-label" for="email">Contact Email:</label>
-        <input id="email" type="email" placeholder="Enter your email" required />
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Basic Information</legend>
+                <label for="name">Name:</label>
+                <input id="name" name="name" placeholder="Enter your name" required="" type="text">
+                
+                <label for="email">Email:</label>
+                <input id="email" name="email" placeholder="Enter your email" required="" type="email">
+                
+                <label for="age-range">Age Range:</label>
+                <select id="age-range" name="age-range" required="">
+                    <option value="">Select one</option>
+                    <option value="under-18">Under 18</option>
+                    <option value="18-24">18-24</option>
+                    <option value="25-34">25-34</option>
+                    <option value="35-plus">35+</option>
+                </select>
+            </fieldset>
 
-        <label id="number-label" for="number">Party Size:</label>
-        <input id="number" type="number" min="1" max="20" placeholder="Number of guests"/>
+            <fieldset>
+                <legend>Creative Interests</legend>
+                <p>Which design and prototyping areas interest you most?</p>
+                
+                <input id="modeling" name="interests" type="checkbox" value="modeling">
+                <label for="modeling" class="inline-label">Brick-building &amp; structural modeling</label>
+                
+                <input id="printing" name="interests" type="checkbox" value="printing">
+                <label for="printing" class="inline-label">3D printing &amp; rapid prototyping</label>
+                
+                <input id="illustration" name="interests" type="checkbox" value="illustration">
+                <label for="illustration" class="inline-label">Digital illustration &amp; UI design</label>
+                
+                <input id="testing" name="interests" type="checkbox" value="testing">
+                <label for="testing" class="inline-label">Usability evaluation &amp; playtesting</label>
+            </fieldset>
 
-        <label for="dropdown">Seating Preference:</label>
-        <select id="dropdown">
-          <option value="main-deck">The Main Deck</option>
-          <option value="pier">Over-Water Pier</option>
-          <option value="cypress-room">The Cypress VIP Room</option>
-        </select>
+            <fieldset>
+                <legend>Space Experience</legend>
+                <p>Which design lab zone would you visit first?</p>
+                
+                <input id="modeling-lab" name="first-area" required="" type="radio" value="modeling-lab">
+                <label for="modeling-lab" class="inline-label">MOC Brick Lab (Structural Design)</label>
+                
+                <input id="forge-lab" name="first-area" type="radio" value="forge-lab">
+                <label for="forge-lab" class="inline-label">3D Print Forge (Manufacturing)</label>
+                
+                <input id="sandbox-lab" name="first-area" type="radio" value="sandbox-lab">
+                <label for="sandbox-lab" class="inline-label">UX/UI Sandbox (Software Layouts)</label>
+                
+                <input id="test-zone" name="first-area" type="radio" value="test-zone">
+                <label for="test-zone" class="inline-label">Playtesting Hub (User Evaluation)</label>
+                
+                <label for="comments">What tools or resources would you want the design space to include?</label>
+                <textarea id="comments" name="comments" placeholder="Share your suggestions (e.g., specific software, parts storage, filament options)" rows="5"></textarea>
+            </fieldset>
 
-        <p><strong>Are you celebrating a special occasion?</strong></p>
-        <!-- Added inline classes here -->
-        <label class="inline-label">
-          <input class="inline-input" type="radio" name="recommend" value="yes" checked /> Yes, it's a celebration!
-        </label>
-        <label class="inline-label">
-          <input class="inline-input" type="radio" name="recommend" value="no" /> No, just hungry for swamp food.
-        </label>
-
-        <p><strong>Select your preferred Bayou Appetizers:</strong></p>
-        <!-- Added inline classes here -->
-        <label class="inline-label">
-          <input class="inline-input" type="checkbox" value="gator-bites" /> Signature Alligator Bites
-        </label>
-        <label class="inline-label">
-          <input class="inline-input" type="checkbox" value="crawfish-dip" /> Smoked Crawfish Dip
-        </label>
-        <label class="inline-label">
-          <input class="inline-input" type="checkbox" value="hushpuppies" /> Jalapeño Hushpuppies
-        </label>
-
-        <label for="comments">Food Allergies or Special Requests:</label>
-        <textarea id="comments" rows="4" placeholder="Let our swamp chefs know..."></textarea>
-
-        <button id="submit" type="submit">Confirm Reservation</button>
-      </form>
+            <input type="submit" value="Submit Survey">
+            <input type="reset" value="Reset Form">
+        </form>
     </main>
 
     <div data-include="components/footer.html"></div>
 
     <script src="scripts/include_components.js"></script>
     <script src="scripts/defaultscripts.js"></script>
+
+    <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
   </body>
 </html>

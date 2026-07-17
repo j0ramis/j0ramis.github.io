@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorrin Gutierrez's Jolly Gator | ITIS3135 | Survey</title>
+    <link rel="stylesheet" href="styles/jollygator.css"> 
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  </head>
+  
+  <body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+      <h1 id="title">VIP Table Booking & Menu Selector</h1>
+      <p id="description">Reserve your spot and pre-select your swamp delicacies for the evening.</p>
+
+      <form id="survey-form">
+        <label id="name-label" for="name">Guest Name:</label>
+        <input id="name" type="text" placeholder="Enter your full name" required />
+
+        <label id="email-label" for="email">Contact Email:</label>
+        <input id="email" type="email" placeholder="Enter your email" required />
+
+        <label id="number-label" for="number">Party Size:</label>
+        <input id="number" type="number" min="1" max="20" placeholder="Number of guests"/>
+
+        <label for="dropdown">Seating Preference:</label>
+        <select id="dropdown">
+          <option value="main-deck">The Main Deck</option>
+          <option value="pier">Over-Water Pier</option>
+          <option value="cypress-room">The Cypress VIP Room</option>
+        </select>
+
+        <p><strong>Are you celebrating a special occasion?</strong></p>
+        <!-- Added inline classes here -->
+        <label class="inline-label">
+          <input class="inline-input" type="radio" name="recommend" value="yes" checked /> Yes, it's a celebration!
+        </label>
+        <label class="inline-label">
+          <input class="inline-input" type="radio" name="recommend" value="no" /> No, just hungry for swamp food.
+        </label>
+
+        <p><strong>Select your preferred Bayou Appetizers:</strong></p>
+        <!-- Added inline classes here -->
+        <label class="inline-label">
+          <input class="inline-input" type="checkbox" value="gator-bites" /> Signature Alligator Bites
+        </label>
+        <label class="inline-label">
+          <input class="inline-input" type="checkbox" value="crawfish-dip" /> Smoked Crawfish Dip
+        </label>
+        <label class="inline-label">
+          <input class="inline-input" type="checkbox" value="hushpuppies" /> Jalapeño Hushpuppies
+        </label>
+
+        <label for="comments">Food Allergies or Special Requests:</label>
+        <textarea id="comments" rows="4" placeholder="Let our swamp chefs know..."></textarea>
+
+        <button id="submit" type="submit">Confirm Reservation</button>
+      </form>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="scripts/include_components.js"></script>
+    <script src="scripts/defaultscripts.js"></script>
+
+    <script src="https://divonbriesen.github.io/web123/scripts/standards-check.js" defer></script>
+  </body>
+</html>

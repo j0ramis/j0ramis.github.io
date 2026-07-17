@@ -1,137 +1,433 @@
-body {
-    background-color: #20246f;
-    color: #e2e8f0;
-    font-family: 'Times New Roman', Times, serif;
-    line-height: 1.6;
+/* ==========================================================================
+   THE JOLLY GATOR'S SWAMP LOUNGE - STYLE GUIDE (style.css)
+   Course: ITIS 3135 | Designer: Jorrin Gutierrez
+   Theme: A premium, cozy, swamp-inspired aesthetic blending rich moss greens, 
+          deep bayou teals, and warm amber accents.
+   ========================================================================== */
+
+/* --- Custom Property Variables --- */
+:root {
+    --primary-dark: #122620;
+    --primary-accent: #2c5e43;
+    --secondary-accent: #bd9779;
+    --light-bg: #f4f7f5;
+    --white: #ffffff;
+    --text-color: #2b3a32;
+    --border-color: #d1dcd6;
+    --font-heading: 'Georgia', serif;
+    --font-body: 'Open Sans', Arial, Helvetica, sans-serif;
+    --max-width: 1000px;
+}
+
+/* --- Base & Reset --- */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* 
-  Removed header and footer from here so they 
-  no longer have a 950px max-width restriction. 
-*/
+body {
+    font-family: var(--font-body);
+    font-size: 11pt;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+/* --- Layout Container --- */
 main {
-    max-width: 950px;
-    margin: 20px auto;
-    padding: 30px 20px;
-    box-sizing: border-box;
+    max-width: var(--max-width);
+    margin: 30px auto;
+    padding: 25px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(18, 38, 32, 0.05);
+    border: 1px solid var(--border-color);
+    background-image: url('image/jollygator.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
+/* --- Helper Classes & Validators --- */
+.validators a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+}
+
+/* --- Typography --- */
+h1 { 
+    font-size: 22pt; 
+    text-align: center; 
+    letter-spacing: -0.5px; 
+    font-family: var(--font-heading);
+    background-color: var(--primary-accent);
+    border-radius: 6px;
+    color: var(--white);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+h2 { 
+    font-size: 16pt; 
+    padding-left: 12px; 
+    margin-top: 10px;
+    font-family: var(--font-heading);
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+    font-weight: 700; 
+}
+
+h3 { 
+    font-size: 13pt; 
+    color: var(--secondary-accent);
+    font-family: var(--font-heading);
+    margin-bottom: 15px;
+    font-weight: 700; 
+}
+
+h4 {
+    font-family: var(--font-heading);
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+h6 {
+    font-size: 1.35rem;
+    margin: 1rem 0;
+    text-align: center;
+    white-space: nowrap;
+}
+
+p {
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+strong {
+    color: var(--primary-dark);
+}
+
+/* --- Header & Footer Shared --- */
+header, footer {
+    background-color: var(--primary-dark);
+    text-align: center;
+}
+
+/* --- Header Component --- */
 header {
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--white);
     padding: 30px 20px;
-    background-color: #1e293b;
+    border-bottom: 4px solid var(--secondary-accent);
 }
 
-h1 {
-    color: #ffffff;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-}
-
-h2 {
-    font-size: 1.75rem;
-    margin-top: 1.5em;
-    color: #93c5fd; 
-    font-weight: 700;
-    letter-spacing: -0.02em;
-}
-
-h3 {
-    color: #ffffff;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-}
-
-#landing-text {
+header p {
+    margin: 12px 0;
     text-align: center;
-    font-size: 1.25rem;
-    color: #cbd5e1;
-    max-width: 700px;
-    margin: 0 auto;
 }
 
+/* --- Navigation Bars --- */
 nav {
-    margin: 20px 0;
+    margin: 10px 0;
+    color: var(--secondary-accent);
 }
 
-figure {
+nav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 10pt;
+    padding: 6px 8px;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+header nav a {
+    color: #cbdad0;
+}
+
+header nav a:hover {
+    color: var(--white);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* --- Footer Component --- */
+footer {
+    color: #a4bfae;
+    padding: 25px 20px;
+    margin-top: 50px;
+    font-size: 9.5pt;
+    border-top: 4px solid var(--primary-accent);
+}
+
+footer p {
+    margin: 12px 0;
     text-align: center;
-    margin: 30px 0;
+}
+
+footer a {
+    color: var(--white);
+    text-decoration: underline;
+    margin: 0 5px;
+}
+
+footer nav a, 
+footer a:hover {
+    color: var(--secondary-accent);
+}
+
+footer nav a:hover {
+    background-color: transparent;
+}
+
+/* --- Form Elements --- */
+form {
+    background-color: var(--light-bg);
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--primary-dark);
+}
+
+input, select, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid var(--primary-accent);
+}
+
+/* --- Callout Accent Box --- */
+.bayou-callout {
+    background-color: #eef3f0;
+    border-left: 4px solid var(--secondary-accent);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Keeps the radio buttons and checkboxes on the same line as the text */
+.inline-label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+/* Overrides the 100% width applied to other inputs */
+.inline-input {
+    width: auto;
+    margin-right: 10px;
+    margin-bottom: 0; /* Removes bottom margin so it centers vertically */
+}
+
+/* --- Figure & Image Formats --- */
+figure {
+    margin: 25px auto;
+    text-align: center;
+    max-width: 340px; /* Snugly wraps around your 300px wide image + padding */
+    background-color: var(--light-bg);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
 }
 
 figure img {
-    max-width: 400px;
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); 
-}
-
-figcaption,
-cite {
-    font-style: italic;
-    color: #94a3b8;
-    font-size: 0.9rem;
-    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 2px solid var(--primary-accent);
     display: block;
+    margin: 0 auto 10px auto;
 }
 
-.validators a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            justify-self: center;
-        }
+figcaption {
+    font-size: 9.5pt;
+    font-style: italic;
+    color: var(--primary-dark);
+    margin-top: 8px;
+}
 
+/* --- List Formats (Outer & Nested) --- */
+main ul {
+    margin: 20px 0 20px 25px;
+    padding-left: 0;
+}
+
+main li {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+/* Specific formatting for nested course lists */
+main ul ul {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    border-left: 2px solid var(--primary-accent);
+    padding-left: 15px;
+    list-style-type: circle; /* Different bullet style for nested lists */
+}
+
+main ul ul li {
+    margin-bottom: 10px;
+}
+
+/* --- Blockquote & Citation Formats --- */
 blockquote {
-    background-color: rgba(147, 197, 253, 0.06);
-    border-left: 4px solid #60a5fa;
-    padding: 20px 30px;
-    text-align: left;
-    margin: 40px auto;
-    max-width: 800px;
-    border-radius: 0 12px 12px 0;
+    background-color: #eef3f0; /* Soft moss tint matching your callout */
+    border-left: 4px solid var(--secondary-accent);
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 0 8px 8px 0;
 }
 
 blockquote p {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #f1f5f9;
+    font-family: var(--font-heading);
+    font-size: 13pt;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+    text-align: left; /* Quotes read better left-aligned than fully justified */
 }
 
-footer {
+blockquote cite {
+    display: block;
+    font-size: 9.5pt;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--secondary-accent);
+    text-align: left;
+}
+
+/* ==========================================================================
+   Excel-Style Table Formatting
+   ========================================================================== */
+
+table {
+    border-collapse: collapse;
     width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #64748b;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 40px;
-    padding: 25px 20px;
-    background-color: #1e293b;
-}
-
-a {
-    color: #ffffff;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-a:hover {
-    color: #8f8f8f;
-    text-decoration: underline;
-}
-
-section {
-    background-color: #42507a;
-    padding: 20px;
-    border-radius: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.875rem; /* Standard readable grid size (~14px) */
+    color: #333333;
     margin: 20px 0;
+    background-color: #ffffff;
+}
+
+/* Crisp gridlines across all boundaries */
+table, th, td {
+    border: 1px solid #d4d4d4; /* Excel-like light gray borders */
+}
+
+/* Header styling */
+th {
+    background-color: #f2f2f2; /* Default Excel header background */
+    color: #000000;
+    font-weight: 600;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+/* Table body cells */
+td {
+    padding: 6px 12px; /* Slightly more compact padding */
+    text-align: left;
+    background-color: #ffffff;
+}
+
+/* Alternating row colors (Zebra Striping) */
+tr:nth-child(even) td {
+    background-color: #f9fbfd; /* Excel's subtle ice-blue/light-gray accent row */
+}
+
+/* Interactive hover row selection highlight */
+tr:hover td {
+    background-color: #eaeaea; 
+}
+
+/* ==========================================================================
+   Responsive Playing Card Grid
+   ========================================================================== */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Card Styling */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 380px; /* Gives the card an authentic vertical ratio */
+}
+
+/* Hover effect for an interactive feel */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Ranks (Corner Indicators) */
+.card-rank-top,
+.card-rank-bottom {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #c5a171; /* Matching your studio design brand color */
+    margin: 0;
+    line-height: 1;
+}
+
+.card-rank-top {
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.card-rank-bottom {
+    text-align: right;
+    margin-top: 12px;
+}
+
+/* Center Image Formatting */
+.card-image {
+    display: block;
+    max-width: 80px;
+    height: auto;
+    margin: 0 auto 16px auto;
+    filter: grayscale(20%);
+    opacity: 0.9;
+}
+
+.primary-bar a{
+    font-size: 1.1rem;
+}
+
+.secondary-bar a{
+    font-size: 0.85rem;
 }
