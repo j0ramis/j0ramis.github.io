@@ -295,7 +295,19 @@ ${linkXML}
             }
         });
     }
-    
+
+    // Function to clear out the generated results when resetting
+    function resetFormResults() {
+        resultSection.innerHTML = "";
+        
+        const outputArticle = document.getElementById("generated-code-output");
+        if (outputArticle) {
+            outputArticle.remove();
+        }
+    }
+
+    // Attach it to the form's native reset event
+    form.addEventListener("reset", resetFormResults);
     form.addEventListener("submit", renderIntroduction);
     document.getElementById("add-course").addEventListener("click", addCourse);
     document.getElementById("clear-form").addEventListener("click", clearForm);
